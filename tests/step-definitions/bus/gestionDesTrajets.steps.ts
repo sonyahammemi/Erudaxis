@@ -1,25 +1,3 @@
-/*import { When, Then } from '@cucumber/cucumber';
-import { CustomWorld } from '../../fixtures/world';
-import { GestionDesTrajetsPage } from '../../../pages/bus/gestionDesTrajetsPage';
-import { expect } from '@playwright/test';
-import { URLS } from '../../test-data/urls';
-
-When('When user clicks on {string}', async function (string) {
-    const gestionDesTrajetPage = new  GestionDesTrajetsPage(this.page);
-    await gestionDesTrajetPage.clickAddTrajet();
-});
-When('user adds a new bus with date du trajet {string}, heure de départ {string},point de départ {string}, destination {string}, bus affecté and click {string}', function (string, string2, string3, string4, string5) {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
-});
-When('user modifies the date {string}', function (string) {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
-});
-Then('user deletes the bus route {string}', function (string) {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
-});*/
 import { When, Then, Given } from '@cucumber/cucumber';
 import { GestionDesTrajetsPage } from '../../../pages/bus/gestionDesTrajetsPage';
 import { expect } from '@playwright/test';
