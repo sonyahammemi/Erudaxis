@@ -12,21 +12,20 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                sh 'npm ci'
+                bat 'npm ci'
             }
         }
 
         stage('Install Playwright Browsers') {
             steps {
-                sh 'npx playwright install --with-deps chromium'
+                bat 'npx playwright install --with-deps chromium'
             }
         }
 
         stage('Tests') {
             steps {
-                // Nettoie les anciens résultats avant le run
-                sh 'rm -rf allure-results'
-                sh 'npm test'
+                bat 'if exist allure-results rmdir /s /q allure-results'
+                bat 'npm test'
             }
         }
     }
